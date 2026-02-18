@@ -1,0 +1,354 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #0F172A;
+}
+.btn-primary:hover { background: var(--green-hover); }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+}
+.btn-outline:hover {
+  border-color: var(--text-sub);
+  color: var(--text);
+}
+
+.btn-ghost {
+  background: var(--bg-elevated);
+  color: var(--text-sub);
+}
+.btn-ghost:hover { color: var(--text); }
+
+.btn-danger {
+  background: transparent;
+  color: #EF4444;
+  border: 1px solid #EF4444;
+}
+.btn-danger:hover { background: rgba(239,68,68,0.1); }
+
+.btn img {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+/* ALBUMES TAMAÑO BASE MEDIANO 1 A 10 */
+.album-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.album-card:hover { transform: translateY(-3px); }
+
+.album-card-cover {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.album-card-info {
+  padding: 12px;
+}
+
+.album-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-card-artist {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.album-card-price {
+  display: block;
+  text-align: center;
+  background: var(--bg-elevated);
+  color: var(--text-sub);
+  border-radius: var(--radius-full);
+  padding: 5px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.album-card:hover .album-card-price {
+  background: var(--green);
+  color: #0F172A;
+}
+
+/* GRID */
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .albums-grid,
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* INPUTS */
+.input {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.input:focus { border-color: var(--green); }
+.input::placeholder { color: var(--text-muted); }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.input-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 500px) {
+  .input-row { grid-template-columns: 1fr; }
+}
+
+/* TRACKLIST TABLE */
+.tracklist {
+  width: 100%;
+}
+
+.tracklist-header {
+  display: grid;
+  grid-template-columns: 32px 1fr 1fr 60px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tracklist-row {
+  display: grid;
+  grid-template-columns: 32px 1fr 1fr 60px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+/* TRACKLIST EXPERIENCES */
+.tracklist-row:hover { background: var(--bg-elevated); }
+.tracklist-row .track-num { color: var(--text-muted); font-size: 13px; }
+.tracklist-row .track-title { font-size: 14px; font-weight: 500; color: var(--text); }
+.tracklist-row .track-artist { font-size: 13px; color: var(--text-muted); }
+.tracklist-row .track-duration { font-size: 13px; color: var(--text-muted); text-align: right; }
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab:hover { color: var(--text); }
+.tab.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--bg-elevated);
+  color: var(--text-sub);
+}
+
+.badge-green { background: rgba(129,193,75,0.15); color: var(--green); }
+.badge-pink  { background: rgba(255,60,199,0.15); color: var(--pink); }
+.badge-cyan  { background: rgba(156,255,250,0.15); color: var(--cyan); }
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+/* STORE FIRST PURCHASE */
+.order-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.order-summary-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+}
+
+.order-row.total {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+/* CART CHECKOUT PRE AND POST */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.cart-item-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cart-item-info { flex: 1; min-width: 0; }
+.cart-item-title { font-size: 15px; font-weight: 600; color: var(--text); }
+.cart-item-artist { font-size: 13px; color: var(--text-muted); }
+.cart-item-format { font-size: 12px; color: var(--text-muted); }
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+  transition: background 0.2s;
+}
+.qty-btn img { width: 14px; height: 14px; }
+.qty-btn:hover { background: var(--border); }
+
+.qty-num {
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 64px;
+  text-align: right;
+}
+
+.cart-item-delete {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.cart-item-delete:hover { opacity: 1; }
+.cart-item-delete img { width: 18px; }
