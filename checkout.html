@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicStream — Secure Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/views/checkout.css">
+
+    <meta name="description" content="MusicStream — Secure Checkout. Complete your purchase with confidence. Enjoy seamless transactions and instant access to your favorite music.">
+    <meta name="keywords" content="MusicStream, secure checkout, music purchase, seamless transactions, instant access, favorite music">
+    <meta name="author" content="DB">
+
+</head>
+<body>
+    <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/img/logoMS.png" alt="MusicStream Logo">
+        MusicStream
+      </a>
+      <div class="navbar-actions">
+        <a href="index.html" class="btn btn-ghost" style="font-size:13px;">← Back to Store</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-wrapper">
+    <main class="page-content">
+
+      <!-- BREADCRUMB -->
+      <nav class="breadcrumb">
+        <a href="cart.html">Cart</a>
+        <span>/</span>
+        <span>Payment</span>
+        <span>/</span>
+        <span>Complete</span>
+      </nav>
+
+      <div class="checkout-page">
+        <h1 style="font-size:28px; margin-bottom:28px;">Secure Checkout</h1>
+
+        <div class="checkout-layout">
+
+          <!-- COMIENZO FORMS IZQUIERDA DATOS DE PAGO Y DIRECCION, DERECHA RESUMEN DE ORDEN -->
+          <div>
+
+            <!-- PAYMENT METHOD -->
+            <div class="checkout-section">
+              <h2 class="checkout-section-title">Payment Method</h2>
+
+              <div class="payment-methods">
+                <div class="payment-method active">
+                  <img src="assets/img/visa.png" alt="Visa">
+                </div>
+                <div class="payment-method">
+                  <img src="assets/img/mastercard.png" alt="Mastercard">
+                </div>
+                <div class="payment-method">
+                  <img src="assets/img/cash.jpg" alt="Cash">
+                </div>
+              </div>
+
+              <p style="font-size:14px; font-weight:600; color:var(--text-sub); margin-bottom:16px;">Pay with Credit Card</p>
+
+              <div class="input-group">
+                <label class="input-label">Card Number</label>
+                <input type="text" class="input" placeholder="0000 0000 0000 0000" maxlength="19">
+              </div>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label class="input-label">Expiration (MM/YY)</label>
+                  <input type="text" class="input" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="input-group">
+                  <label class="input-label">CVC</label>
+                  <input type="text" class="input" placeholder="123" maxlength="3">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Name on Card</label>
+                <input type="text" class="input" placeholder="John Doe">
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- BILLING ADDRESS -->
+            <div class="checkout-section">
+              <h2 class="checkout-section-title">Billing Address</h2>
+
+              <div class="input-group">
+                <label class="input-label">Country / Region</label>
+                <select class="input" style="cursor:pointer;">
+                  <option>United States</option>
+                  <option>Guatemala</option>
+                  <option>Mexico</option>
+                  <option>Canada</option>
+                  <option>United Kingdom</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Street Address</label>
+                <input type="text" class="input" placeholder="123 Music Lane">
+              </div>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label class="input-label">City</label>
+                  <input type="text" class="input" placeholder="Nashville">
+                </div>
+                <div class="input-group">
+                  <label class="input-label">State / Province</label>
+                  <input type="text" class="input" placeholder="Tennessee">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Postal Code</label>
+                <input type="text" class="input" placeholder="37203" maxlength="10">
+              </div>
+            </div>
+
+          </div>
+
+            <!-- DERECHA SECCION DE CONFIRMACION -->
+            <aside class="order-summary">
+            <h2 class="order-summary-title">Order Summary</h2>
+
+            <div class="summary-item">
+              <img src="assets/img/cover-1.jpg" alt="" class="summary-item-cover">
+              <div class="summary-item-info">
+                <p class="summary-item-title">Chromatic Echoes</p>
+                <p class="summary-item-artist">By The Lumineers</p>
+              </div>
+              <span class="summary-item-price">$12.99</span>
+            </div>
+
+            <div class="summary-item">
+              <img src="assets/img/cover-2.jpg" alt="" class="summary-item-cover">
+              <div class="summary-item-info">
+                <p class="summary-item-title">Neon Dreams</p>
+                <p class="summary-item-artist">By Synthwave Collective</p>
+              </div>
+              <span class="summary-item-price">$9.99</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="order-row">
+              <span>Subtotal</span>
+              <span>$22.98</span>
+            </div>
+            <div class="order-row">
+              <span>Taxes</span>
+              <span>$1.84</span>
+            </div>
+            <div class="order-row total">
+              <span>Total</span>
+              <span>$24.82</span>
+            </div>
+
+            <a href="success.html" class="btn btn-primary" style="width:100%; margin-top:20px; gap:8px;">
+              <img src="assets/icons/CART-LOCK.png" alt="" style="width:15px;">
+              Place Order & Pay $24.82
+            </a>
+
+            <p style="font-size:11px; color:var(--text-muted); text-align:center; margin-top:12px;">
+              By placing this order, you agree to our
+              <a href="#" style="color:var(--green);">Terms of Service</a> and
+              <a href="#" style="color:var(--green);">Privacy Policy</a>.
+            </p>
+          </aside>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
