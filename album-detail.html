@@ -16,6 +16,175 @@
 
 </head>
 <body>
-    
+    <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/img/logoMS.png" alt="MusicStream Logo">
+        MusicStream
+      </a>
+      <div class="navbar-links">
+        <a href="index.html">Discover</a>
+        <a href="album-detail.html">Library</a>
+        <a href="cart.html">Store</a>
+      </div>
+      <div class="navbar-actions">
+        <div class="search-bar">
+          <img src="assets/icons/NAV-SEARCH.png" alt="Search">
+          <input type="text" placeholder="Search artists, albums...">
+        </div>
+        <a href="cart.html"><img src="assets/icons/NAV-CART.png" alt="Cart"></a>
+        <img src="assets/icons/NAV-NOTIFICATION.png" alt="Notifications">
+        <img src="assets/img/PROFILEPICTURE.png" alt="Profile" class="avatar">
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper">
+    <main class="page-content">
+
+      <!-- BREADCRUMB -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="player.html">Artist</a>
+        <span>/</span>
+        <span>Cosmic Echoes</span>
+      </nav>
+
+      <!-- ALBUM HEADER -->
+      <div class="album-header">
+
+        <!-- Cover -->
+        <img src="assets/img/cover-1.jpg" class="album-cover">
+
+        <!-- Info -->
+        <div class="album-meta">
+          <h1 class="album-title">Cosmic Echoes</h1>
+          <p class="album-info">
+            <span>Orion's Belt</span> &nbsp;·&nbsp; 2023 &nbsp;·&nbsp; Electronic
+          </p>
+
+          <div class="album-actions">
+            <a href="cart.html" class="btn btn-primary" style="width: fit-content; padding: 12px 28px; font-size: 15px;">
+              Add Album to Cart — $9.99
+            </a>
+            <div class="album-secondary-actions">
+              <button class="btn btn-outline">
+                <img src="assets/icons/PROD-WISHLIST.png" alt="" style="width:16px;">
+                Wishlist
+              </button>
+              <button class="btn btn-outline">
+                <img src="assets/icons/PROD-SHARE.png" alt="" style="width:16px;">
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRACKLIST -->
+      <section>
+        <h2 class="section-title">Tracklist</h2>
+
+        <div class="tracklist">
+          <div class="tracklist-header">
+            <span>#</span>
+            <span>Title</span>
+            <span>Artist</span>
+            <span style="text-align:right;">
+              <img src="assets/icons/PROD-TRACKLIST.png" alt="Duration" style="width:14px; display:inline;">
+            </span>
+          </div>
+
+          <a href="player.html" class="tracklist-row">
+            <span class="track-num">1</span>
+            <span class="track-title">Starlight Serenade</span>
+            <span class="track-artist">Orion's Belt</span>
+            <span class="track-duration">3:45</span>
+          </a>
+          <a href="player.html" class="tracklist-row">
+            <span class="track-num">2</span>
+            <span class="track-title">Nebula Dreams</span>
+            <span class="track-artist">Orion's Belt</span>
+            <span class="track-duration">4:12</span>
+          </a>
+          <a href="player.html" class="tracklist-row">
+            <span class="track-num">3</span>
+            <span class="track-title">Solar Flare</span>
+            <span class="track-artist">Orion's Belt, ft. Celeste</span>
+            <span class="track-duration">3:58</span>
+          </a>
+          <a href="player.html" class="tracklist-row">
+            <span class="track-num">4</span>
+            <span class="track-title">Gravity's Pull</span>
+            <span class="track-artist">Orion's Belt</span>
+            <span class="track-duration">5:01</span>
+          </a>
+          <a href="player.html" class="tracklist-row">
+            <span class="track-num">5</span>
+            <span class="track-title">Event Horizon</span>
+            <span class="track-artist">Orion's Belt</span>
+            <span class="track-duration">4:33</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- INFO TABS -->
+      <section style="margin-top: 40px;">
+        <div class="tabs">
+          <span class="tab active" onclick="showTab('about', this)">About the Artist</span>
+          <span class="tab" onclick="showTab('reviews', this)">Reviews</span>
+          <span class="tab" onclick="showTab('credits', this)">Credits</span>
+        </div>
+
+        <div id="tab-about" class="tab-content active">
+          <p style="max-width: 640px; line-height: 1.8;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem nisi accusamus omnis excepturi. Sapiente, assumenda praesentium cum magni mollitia iusto laborum ut sint dignissimos debitis similique odit, maxime dolor?
+          </p>
+          <a href="player.html" style="color: var(--green); font-size: 14px; display: inline-block; margin-top: 12px;">
+            Read more on their page →
+          </a>
+        </div>
+
+        <div id="tab-reviews" class="tab-content">
+          <p style="color: var(--text-sub);">No reviews yet. Be the first to review this album.</p>
+        </div>
+
+        <div id="tab-credits" class="tab-content">
+          <p style="color: var(--text-sub);">Produced by Orion's Belt. Mixed by Nova Studio. Mastered by Stellar Audio.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- MINI PLAYER BAR -->
+  <div style="position: fixed; bottom: 0; left: 0; right: 0; height: 64px; background: var(--bg-card); border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 24px; gap: 16px; z-index: 100;">
+    <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
+    <div>
+      <p style="font-size:13px; font-weight:600; color:var(--text);">Starlight Serenade</p>
+      <p style="font-size:12px; color:var(--text-muted);">Orion's Belt</p>
+    </div>
+    <div style="flex:1; display:flex; align-items:center; justify-content:center; gap:20px;">
+      <img src="assets/icons/P-RANDOMIZE.png" alt="Shuffle" style="width:18px; opacity:0.5;">
+      <img src="assets/icons/P-SKIPLEFT.png" alt="Prev" style="width:20px; opacity:0.7;">
+      <a href="player.html"><img src="assets/icons/P-PLAY.png" alt="Play" style="width:40px;"></a>
+      <img src="assets/icons/P-SKIPRIGHT.png" alt="Next" style="width:20px; opacity:0.7;">
+      <img src="assets/icons/P-LOOP.png" alt="Loop" style="width:18px; opacity:0.5;">
+    </div>
+    <span style="font-size:12px; color:var(--text-muted);">1:23 / 3:45</span>
+    <img src="assets/icons/P-VOLUME.png" alt="Volume" style="width:18px; opacity:0.6;">
+  </div>
+
+  <script>
+    function showTab(name, el) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-' + name).classList.add('active');
+      el.classList.add('active');
+    }
+  </script>
 </body>
 </html>
