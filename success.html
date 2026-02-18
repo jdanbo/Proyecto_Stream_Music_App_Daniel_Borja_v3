@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicStream — Secure Checkout</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/views/checkout.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicStream — Purchase Successful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/checkout.css">
 
-    <meta name="description" content="MusicStream — Secure Checkout. Complete your purchase with confidence. Enjoy seamless transactions and instant access to your favorite music.">
-    <meta name="keywords" content="MusicStream, secure checkout, music purchase, seamless transactions, instant access, favorite music">
-    <meta name="author" content="DB">
-
+  <meta name="description" content="Your purchase was successful! Thank you for choosing MusicStream. Enjoy your music!">
+  <meta name="keywords" content="MusicStream, purchase successful, thank you, enjoy music, music streaming service">
+  <meta name="author" content="DB SAD">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -24,166 +23,84 @@
         <img src="assets/img/logoMS.png" alt="MusicStream Logo">
         MusicStream
       </a>
+      <div class="navbar-links">
+        <a href="index.html">Discover</a>
+        <a href="#">Library</a>
+        <a href="cart.html">Store</a>
+      </div>
       <div class="navbar-actions">
-        <a href="index.html" class="btn btn-ghost" style="font-size:13px;">← Back to Store</a>
+        <div class="search-bar">
+          <img src="assets/icons/NAV-SEARCH.png" alt="Search">
+          <input type="text" placeholder="Artists, albums, tracks">
+        </div>
+        <img src="assets/img/PROFILEPICTURE.png" alt="Profile" class="avatar">
       </div>
     </nav>
   </header>
 
-  <div class="page-wrapper">
-    <main class="page-content">
+  <div class="success-page">
 
-      <!-- BREADCRUMB -->
-      <nav class="breadcrumb">
-        <a href="cart.html">Cart</a>
-        <span>/</span>
-        <span>Payment</span>
-        <span>/</span>
-        <span>Complete</span>
-      </nav>
+    <aside class="sidebar">
+      <p class="sidebar-label">My Music</p>
 
-      <div class="checkout-page">
-        <h1 style="font-size:28px; margin-bottom:28px;">Secure Checkout</h1>
+      <a href="success.html" class="sidebar-item active">
+        <img src="assets/icons/CONFI-RECENTLY.png" alt="">
+        Recently Purchased
+      </a>
+      <a href="#" class="sidebar-item">
+        <img src="assets/icons/CONFI-MYALBUMS.png" alt="">
+        My Albums
+      </a>
+      <a href="#" class="sidebar-item">
+        <img src="assets/icons/PROD-WISHLIST.png" alt="">
+        Liked Songs
+      </a>
+    </aside>
 
-        <div class="checkout-layout">
+    <!-- RIGHT: SUCCESS CONTENT -->
+    <div class="success-content">
+      <div class="success-card">
 
-          <!-- COMIENZO FORMS IZQUIERDA DATOS DE PAGO Y DIRECCION, DERECHA RESUMEN DE ORDEN -->
-          <div>
+        <!-- Check icon -->
+        <img src="assets/icons/CONFI-CHECK.png" alt="Success" class="success-icon">
 
-            <!-- PAYMENT METHOD -->
-            <div class="checkout-section">
-              <h2 class="checkout-section-title">Payment Method</h2>
+        <h1 class="success-title">Purchase Successful!</h1>
+        <p class="success-subtitle">
+          Thank you for your purchase. A confirmation email has been sent to your
+          registered address. You can now find your new music in your library.
+        </p>
 
-              <div class="payment-methods">
-                <div class="payment-method active">
-                  <img src="assets/img/visa.png" alt="Visa">
-                </div>
-                <div class="payment-method">
-                  <img src="assets/img/mastercard.png" alt="Mastercard">
-                </div>
-                <div class="payment-method">
-                  <img src="assets/img/cash.jpg" alt="Cash">
-                </div>
-              </div>
+        <!-- Order summary -->
+        <div style="text-align:left; margin-bottom:16px;">
+          <p style="font-size:14px; font-weight:700; color:var(--text); margin-bottom:12px;">Order Summary</p>
 
-              <p style="font-size:14px; font-weight:600; color:var(--text-sub); margin-bottom:16px;">Pay with Credit Card</p>
-
-              <div class="input-group">
-                <label class="input-label">Card Number</label>
-                <input type="text" class="input" placeholder="0000 0000 0000 0000" maxlength="19">
-              </div>
-
-              <div class="input-row">
-                <div class="input-group">
-                  <label class="input-label">Expiration (MM/YY)</label>
-                  <input type="text" class="input" placeholder="MM/YY" maxlength="5">
-                </div>
-                <div class="input-group">
-                  <label class="input-label">CVC</label>
-                  <input type="text" class="input" placeholder="123" maxlength="3">
-                </div>
-              </div>
-
-              <div class="input-group">
-                <label class="input-label">Name on Card</label>
-                <input type="text" class="input" placeholder="John Doe">
-              </div>
+          <div class="success-order-item">
+            <img src="assets/img/cover-11.jpg" alt="Solar Flare" class="success-order-cover">
+            <div class="success-order-info">
+              <p class="success-order-title">Solar Flare</p>
+              <p class="success-order-artist">The Wanderers</p>
             </div>
-
-            <div class="divider"></div>
-
-            <!-- BILLING ADDRESS -->
-            <div class="checkout-section">
-              <h2 class="checkout-section-title">Billing Address</h2>
-
-              <div class="input-group">
-                <label class="input-label">Country / Region</label>
-                <select class="input" style="cursor:pointer;">
-                  <option>United States</option>
-                  <option>Guatemala</option>
-                  <option>Mexico</option>
-                  <option>Canada</option>
-                  <option>United Kingdom</option>
-                </select>
-              </div>
-
-              <div class="input-group">
-                <label class="input-label">Street Address</label>
-                <input type="text" class="input" placeholder="123 Music Lane">
-              </div>
-
-              <div class="input-row">
-                <div class="input-group">
-                  <label class="input-label">City</label>
-                  <input type="text" class="input" placeholder="Nashville">
-                </div>
-                <div class="input-group">
-                  <label class="input-label">State / Province</label>
-                  <input type="text" class="input" placeholder="Tennessee">
-                </div>
-              </div>
-
-              <div class="input-group">
-                <label class="input-label">Postal Code</label>
-                <input type="text" class="input" placeholder="37203" maxlength="10">
-              </div>
-            </div>
-
+            <span class="success-order-price">$14.99</span>
           </div>
-
-            <!-- DERECHA SECCION DE CONFIRMACION -->
-            <aside class="order-summary">
-            <h2 class="order-summary-title">Order Summary</h2>
-
-            <div class="summary-item">
-              <img src="assets/img/cover-1.jpg" alt="" class="summary-item-cover">
-              <div class="summary-item-info">
-                <p class="summary-item-title">Chromatic Echoes</p>
-                <p class="summary-item-artist">By The Lumineers</p>
-              </div>
-              <span class="summary-item-price">$12.99</span>
-            </div>
-
-            <div class="summary-item">
-              <img src="assets/img/cover-2.jpg" alt="" class="summary-item-cover">
-              <div class="summary-item-info">
-                <p class="summary-item-title">Neon Dreams</p>
-                <p class="summary-item-artist">By Synthwave Collective</p>
-              </div>
-              <span class="summary-item-price">$9.99</span>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="order-row">
-              <span>Subtotal</span>
-              <span>$22.98</span>
-            </div>
-            <div class="order-row">
-              <span>Taxes</span>
-              <span>$1.84</span>
-            </div>
-            <div class="order-row total">
-              <span>Total</span>
-              <span>$24.82</span>
-            </div>
-
-            <a href="success.html" class="btn btn-primary" style="width:100%; margin-top:20px; gap:8px;">
-              <img src="assets/icons/CART-LOCK.png" alt="" style="width:15px;">
-              Place Order & Pay $24.82
-            </a>
-
-            <p style="font-size:11px; color:var(--text-muted); text-align:center; margin-top:12px;">
-              By placing this order, you agree to our
-              <a href="#" style="color:var(--green);">Terms of Service</a> and
-              <a href="#" style="color:var(--green);">Privacy Policy</a>.
-            </p>
-          </aside>
-
         </div>
-      </div>
 
-    </main>
+        <div class="success-total">
+          <span>Total:</span>
+          <span style="color:var(--text); font-weight:700;">$14.99</span>
+        </div>
+        <p class="success-order-id">
+          Order ID: &nbsp; <span style="font-family: monospace; letter-spacing:1px;">XXX-XXX-XXX</span>
+        </p>
+
+        <!-- Actions -->
+        <div class="success-actions">
+          <a href="player.html" class="btn btn-outline">View Order History</a>
+          <a href="index.html" class="btn btn-primary">Return to Store</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
