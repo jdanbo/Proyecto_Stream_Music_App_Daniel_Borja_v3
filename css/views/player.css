@@ -1,0 +1,225 @@
+.player-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  background: var(--bg-main);
+}
+/* MAINS */
+.player-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.player-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+.player-artwork-wrap {
+  position: relative;
+}
+
+.player-artwork {
+  width: 300px;
+  height: 300px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: 0 0 60px rgba(129,193,75,0.2), 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.player-song-info {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-song-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.player-song-artist,
+.player-song-album {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.player-heart img {
+  width: 22px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.player-heart img:hover { opacity: 1; }
+
+.player-upnext {
+  width: 260px;
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  padding: 24px 0;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.upnext-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 20px;
+  margin-bottom: 16px;
+}
+
+.upnext-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.upnext-item:hover { background: var(--bg-elevated); }
+
+.upnext-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.upnext-info { flex: 1; min-width: 0; }
+.upnext-song { font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.upnext-artist { font-size: 12px; color: var(--text-muted); }
+.upnext-duration { font-size: 12px; color: var(--text-muted); flex-shrink: 0; }
+
+/* BARA DE REPRODUCCIÓN */
+.player-bar {
+  height: 80px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.player-bar-track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.player-bar-cover {
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.player-bar-title { font-size: 13px; font-weight: 600; color: var(--text); }
+.player-bar-artist { font-size: 12px; color: var(--text-muted); }
+
+/* CONTROLADORES */
+.player-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctrl-btn img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.ctrl-btn img:hover { opacity: 1; }
+
+.ctrl-btn.play-btn img {
+  width: 44px;
+  height: 44px;
+  opacity: 1;
+}
+
+.player-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 35%;
+  background: var(--green);
+  border-radius: 99px;
+}
+
+.progress-time { font-size: 11px; color: var(--text-muted); flex-shrink: 0; }
+
+.player-volume {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.player-volume img { width: 18px; opacity: 0.6; }
+
+.volume-track {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+}
+
+.volume-fill {
+  height: 100%;
+  width: 70%;
+  background: var(--text-sub);
+  border-radius: 99px;
+}
+
+.fullscreen-btn img {
+  width: 18px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.fullscreen-btn img:hover { opacity: 1; }
+
+@media (max-width: 768px) {
+  .player-upnext { display: none; }
+  .player-artwork { width: 220px; height: 220px; }
+  .player-bar-track { display: none; }
+}
