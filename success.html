@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicStream — Purchase Successful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/checkout.css">
+
+  <meta name="description" content="Your purchase was successful! Thank you for choosing MusicStream. Enjoy your music!">
+  <meta name="keywords" content="MusicStream, purchase successful, thank you, enjoy music, music streaming service">
+  <meta name="author" content="DB SAD">
+</head>
+<body>
+    <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/img/logoMS.png" alt="MusicStream Logo">
+        MusicStream
+      </a>
+      <div class="navbar-links">
+        <a href="index.html">Discover</a>
+        <a href="player.html">Library</a>
+        <a href="cart.html">Store</a>
+      </div>
+      <div class="navbar-actions">
+        <div class="search-bar">
+          <img src="assets/icons/NAV-SEARCH.png" alt="Search">
+          <input type="text" placeholder="Artists, albums, tracks">
+        </div>
+        <img src="assets/img/PROFILEPICTURE.png" alt="Profile" class="avatar">
+      </div>
+    </nav>
+  </header>
+
+  <div class="success-page">
+
+    <aside class="sidebar">
+      <p class="sidebar-label">My Music</p>
+
+      <a href="success.html" class="sidebar-item active">
+        <img src="assets/icons/CONFI-RECENTLY.png" alt="">
+        Recently Purchased
+      </a>
+      <a href="player.html" class="sidebar-item">
+        <img src="assets/icons/CONFI-MYALBUMS.png" alt="">
+        My Albums
+      </a>
+      <a href="album-detail.html" class="sidebar-item">
+        <img src="assets/icons/PROD-WISHLIST.png" alt="">
+        Liked Songs
+      </a>
+    </aside>
+
+    <!-- RIGHT: SUCCESS CONTENT -->
+    <div class="success-content">
+      <div class="success-card">
+
+        <!-- Check icon -->
+        <img src="assets/icons/CONFI-CHECK.png" alt="Success" class="success-icon">
+
+        <h1 class="success-title">Purchase Successful!</h1>
+        <p class="success-subtitle">
+          Thank you for your purchase. A confirmation email has been sent to your
+          registered address. You can now find your new music in your library.
+        </p>
+
+        <!-- Order summary -->
+        <div style="text-align:left; margin-bottom:16px;">
+          <p style="font-size:14px; font-weight:700; color:var(--text); margin-bottom:12px;">Order Summary</p>
+
+          <div class="success-order-item">
+            <img src="assets/img/cover-11.jpg" alt="Solar Flare" class="success-order-cover">
+            <div class="success-order-info">
+              <p class="success-order-title">Solar Flare</p>
+              <p class="success-order-artist">The Wanderers</p>
+            </div>
+            <span class="success-order-price">$14.99</span>
+          </div>
+        </div>
+
+        <div class="success-total">
+          <span>Total:</span>
+          <span style="color:var(--text); font-weight:700;">$14.99</span>
+        </div>
+        <p class="success-order-id">
+          Order ID: &nbsp; <span style="font-family: monospace; letter-spacing:1px;">XXX-XXX-XXX</span>
+        </p>
+
+        <!-- Actions -->
+        <div class="success-actions">
+          <a href="player.html" class="btn btn-outline">View Order History</a>
+          <a href="index.html" class="btn btn-primary">Return to Store</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
