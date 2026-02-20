@@ -27,35 +27,46 @@
 
 
     <style>
+        
         .album-header {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-      align-items: start;
-    }
-    .album-cover {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: var(--radius);
-      box-shadow: 0 8px 40px green;
-    }
-    .album-meta { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
-    .album-title { font-size: 36px; font-weight: 800; color: var(--text); }
-    .album-info { font-size: 14px; color: var(--text-muted); }
-    .album-info span { color: var(--text-sub); }
-    .album-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
-    .album-secondary-actions { display: flex; gap: 10px; }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+        align-items: start;
+        }
+        .album-cover {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 40px green;
+        }
+        .album-meta { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
+        .album-title { font-size: 36px; font-weight: 800; color: var(--text); }
+        .album-info { font-size: 14px; color: var(--text-muted); }
+        .album-info span { color: var(--text-sub); }
+        .album-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+        .album-secondary-actions { display: flex; gap: 10px; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
 
-    @media (max-width: 700px) {
-      .album-header { grid-template-columns: 1fr; }
-      .album-title { font-size: 26px; }
-    }
+        @media (max-width: 700px) {
+        .album-header { grid-template-columns: 1fr; }
+        .album-title { font-size: 26px; }
+        }
 
-    
+        /* .title-module {
+            max-width: 900px;
+            margin: 0 auto;
+            
+        } */
+        
+        /* .tracklist-a {
+            max-width: 900px;
+            margin: 0 auto;
+        } */
+
 
     </style>
 </head>
@@ -88,23 +99,23 @@
 
     <!-- MAIN CONTENT -->
         <!-- TITLE + BUTOM -->
-        <section class="titleModule">
+        <div class="title-module">
             <div>
-                <img src="assets/icons/P-HEART.png" alt="Favorite">
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:50px">
                 <h1 class="album-title">Favorite Songs</h1>
                 <a href="favorites.html" class="btn btn-primary">Play All</a>
             </div>
-        </section>
+        </div>
 
         <!-- TRACKLIST -->
-        <section>
+        <section class="tracklis-a">
             <div class="tracklist">
               <div class="tracklist-header">
                 <span>#</span>
                 <span>Title</span>
                 <span>Artist</span>
                 <span style="text-align:right;">
-                  <img src="assets/icons/PROD-TRACKLIST.png" alt="Duration" style="width:14px; display:inline;">
+                  <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
                 </span>
               </div>
     
@@ -112,31 +123,31 @@
                 <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
                 <span class="track-title">Starlight Serenade</span>
                 <span class="track-artist">Orion's Belt</span>
-                <span class="track-duration">3:45</span>
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
               </a>
               <a href="player.html" class="tracklist-row">
                 <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
                 <span class="track-title">Nebula Dreams</span>
                 <span class="track-artist">Orion's Belt</span>
-                <span class="track-duration">4:12</span>
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
               </a>
               <a href="player.html" class="tracklist-row">
                 <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
                 <span class="track-title">Solar Flare</span>
                 <span class="track-artist">Orion's Belt, ft. Celeste</span>
-                <span class="track-duration">3:58</span>
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
               </a>
               <a href="player.html" class="tracklist-row">
                 <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
                 <span class="track-title">Gravity's Pull</span>
                 <span class="track-artist">Orion's Belt</span>
-                <span class="track-duration">5:01</span>
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
               </a>
               <a href="player.html" class="tracklist-row">
                 <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
                 <span class="track-title">Event Horizon</span>
                 <span class="track-artist">Orion's Belt</span>
-                <span class="track-duration">4:33</span>
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
               </a>
             </div>
           </section>
