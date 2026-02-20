@@ -27,7 +27,33 @@
 
 
     <style>
+        .album-header {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+      align-items: start;
+    }
+    .album-cover {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 40px green;
+    }
+    .album-meta { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
+    .album-title { font-size: 36px; font-weight: 800; color: var(--text); }
+    .album-info { font-size: 14px; color: var(--text-muted); }
+    .album-info span { color: var(--text-sub); }
+    .album-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .album-secondary-actions { display: flex; gap: 10px; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
+    @media (max-width: 700px) {
+      .album-header { grid-template-columns: 1fr; }
+      .album-title { font-size: 26px; }
+    }
     </style>
 </head>
 <body>
@@ -58,7 +84,12 @@
         </header>
 
     <!-- MAIN CONTENT -->
-     
-    <!-- REPRODUCTOR -->
+        <!-- TITLE + BUTOM -->
 
+
+        <!-- TRACKLIST -->
+
+
+    <!-- REPRODUCTOR -->
+        
 </html>
