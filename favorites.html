@@ -56,18 +56,61 @@
         .album-title { font-size: 26px; }
         }
 
-        /* .title-module {
-            max-width: 900px;
-            margin: 0 auto;
+        .title-module {
             display: flex;
             align-items: center;
-            gap: 16px;
-        } */
+            justify-content: space-between;
+            padding: 30px;
+        }
         
         /* .tracklist-a {
             max-width: 900px;
             margin: 0 auto;
         } */
+
+        .song-list{
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .song-row {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 15px;
+          
+
+        }
+
+        .song-album{
+          width: 50px;
+          height: 50px;
+          border-radius: 8px;
+        }
+
+        .song-info{
+          flex: auto;
+          flex-direction: column;
+          display: flex;
+
+        }
+
+        .song-title{
+          font-size: 15px;
+
+        }
+
+        .song-artist{
+          font-size: 15px;
+          margin-top: 5px;
+        }
+
+        .song-heart{
+          width: 20px;
+          height: 20px;
+        }
+        
 
 
     </style>
@@ -100,56 +143,69 @@
         </header>
 
     <!-- MAIN CONTENT -->
+    <div class="page-wrapper">
+
+    </div>
         <!-- TITLE + BUTOM -->
         <div class="title-module">
-            <div style="flex:1; display:flex; gap:20px">
-                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:50px">
+            <div style="display: flex; align-items: center; gap: 20px; font-size: 30px;">
+                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:50px; height: 50px;">
                 <h1 class="album-title">Favorite Songs</h1>
                 <a href="favorites.html" class="btn btn-primary">Play All</a>
             </div>
         </div>
 
         <!-- TRACKLIST -->
-        <section class="tracklis-a">
-            <div class="tracklist">
-              <div class="tracklist-header">
-                <span>#</span>
-                <span>Title</span>
-                <span>Artist</span>
-                <span style="text-align:right;">
-                  <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
-                </span>
-              </div>
-    
-              <a href="player.html" class="tracklist-row">
-                <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
-                <span class="track-title">Starlight Serenade</span>
-                <span class="track-artist">Orion's Belt</span>
-                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
+        <section>
+            <div class="song-list">
+              <a href="player.html" class="song-row">
+                <img src="assets/img/cover-1.jpg" class="song-album">
+                <div class="song-info">
+                  <span class="song-title">Starlight Serenade</span>
+                  <span class="song-artist">Orion's Belt</span>
+                </div>
+                <img src="assets/icons/P-HEART.png" class="song-heart">
               </a>
-              <a href="player.html" class="tracklist-row">
-                <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
-                <span class="track-title">Nebula Dreams</span>
-                <span class="track-artist">Orion's Belt</span>
-                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
+
+              <a href="player.html" class="song-row">
+                <img src="assets/img/cover-1.jpg" class="song-album">
+                <div class="song-info">
+                  <span class="song-title">Starlight Serenade</span>
+                  <span class="song-artist">Orion's Belt</span>
+                </div>
+                <img src="assets/icons/P-HEART.png" class="song-heart">
               </a>
-              <a href="player.html" class="tracklist-row">
-                <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
-                <span class="track-title">Solar Flare</span>
-                <span class="track-artist">Orion's Belt, ft. Celeste</span>
-                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
+              <a href="player.html" class="song-row">
+                <img src="assets/img/cover-1.jpg" class="song-album">
+                <div class="song-info">
+                  <span class="song-title">Starlight Serenade</span>
+                  <span class="song-artist">Orion's Belt</span>
+                </div>
+                <img src="assets/icons/P-HEART.png" class="song-heart">
               </a>
-              <a href="player.html" class="tracklist-row">
-                <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
-                <span class="track-title">Gravity's Pull</span>
-                <span class="track-artist">Orion's Belt</span>
-                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
+              <a href="player.html" class="song-row">
+                <img src="assets/img/cover-1.jpg" class="song-album">
+                <div class="song-info">
+                  <span class="song-title">Starlight Serenade</span>
+                  <span class="song-artist">Orion's Belt</span>
+                </div>
+                <img src="assets/icons/P-HEART.png" class="song-heart">
               </a>
-              <a href="player.html" class="tracklist-row">
-                <img src="assets/img/cover-1.jpg" alt="" style="width:42px; height:42px; border-radius:6px; object-fit:cover;">
-                <span class="track-title">Event Horizon</span>
-                <span class="track-artist">Orion's Belt</span>
-                <img src="assets/icons/P-HEART.png" alt="Favorite" style="width:14px">
+              <a href="player.html" class="song-row">
+                <img src="assets/img/cover-1.jpg" class="song-album">
+                <div class="song-info">
+                  <span class="song-title">Starlight Serenade</span>
+                  <span class="song-artist">Orion's Belt</span>
+                </div>
+                <img src="assets/icons/P-HEART.png" class="song-heart">
+              </a>
+              <a href="player.html" class="song-row">
+                <img src="assets/img/cover-1.jpg" class="song-album">
+                <div class="song-info">
+                  <span class="song-title">Starlight Serenade</span>
+                  <span class="song-artist">Orion's Belt</span>
+                </div>
+                <img src="assets/icons/P-HEART.png" class="song-heart">
               </a>
             </div>
           </section>
